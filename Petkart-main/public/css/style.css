@@ -1,0 +1,977 @@
+/*******************************/
+/********* General CSS *********/
+/*******************************/
+@import url('../node_modules/font-awesome/css/font-awesome.min.css');
+
+body {
+    color: #757575;
+    background: #ffffff;
+    font-family: 'open sans', sans-serif;
+}
+
+h1,
+h2, 
+h3, 
+h4,
+h5, 
+h6 {
+    color: #454545;
+    font-family: 'Nunito', sans-serif;
+}
+
+a {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    color: #fbaf32;
+    transition: .3s;
+}
+
+a:hover,
+a:active,
+a:focus {
+    color: #719a0a;
+    outline: none;
+    text-decoration: none;
+}
+.logBtn{
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    color: #fbaf32;
+    transition: .3s;
+}
+.logBtn:hover,
+.logBtn:active,
+.logBtn:focus {
+    color: #719a0a;
+    outline: none;
+    text-decoration: none;
+}
+
+
+.btn.custom-btn {
+    padding: 12px 25px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    background: #fbaf32;
+    border: 2px solid #fbaf32;
+    border-radius: 5px;
+    transition: .5s;
+}
+
+.btn.custom-btn:hover {
+    color: #fbaf32;
+    background: transparent;
+}
+
+.btn.custom-btn:focus,
+.form-control:focus,
+.custom-select:focus {
+    box-shadow: none;
+}
+
+.container-fluid {
+    max-width: 1366px;
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    background: #fbaf32;
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    line-height: 1;
+    font-size: 22px;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 5px;
+    transition: background 0.5s;
+    z-index: 9;
+}
+
+.back-to-top i {
+    color: #ffffff;
+    padding-top: 10px;
+}
+
+.back-to-top:hover {
+    background: #719a0a;
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+    font-size: inherit;
+    margin-left: 0;
+}
+
+
+/**********************************/
+/*********** Nav Bar CSS **********/
+/**********************************/
+.navbar {
+    position: relative;
+    transition: .5s;
+    z-index: 999;
+}
+
+.navbar.nav-sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
+}
+
+.navbar .navbar-brand {
+    margin: 0;
+    color: #fbaf32;
+    font-size: 45px;
+    line-height: 0px;
+    font-weight: 700;
+    font-family: 'Nunito', sans-serif;
+    transition: .5s;
+    
+}
+
+.navbar .navbar-brand span {
+    color: #719a0a;
+}
+
+.navbar .navbar-brand:hover {
+    color: #fbaf32;
+}
+
+.navbar .navbar-brand:hover span {
+    color: #fbaf32;
+}
+
+.navbar .navbar-brand img {
+    max-width: 100%;
+    max-height: 40px;
+}
+
+.navbar .dropdown-menu {
+    margin-top: 0;
+    border: 0;
+    border-radius: 0;
+    background: #f8f9fa;
+}
+
+
+.search-bar{
+    width: 18rem;
+  height: 2.5rem;
+  margin-top: 8px;
+}
+.nav-name-dec{
+    margin: 0px;
+}
+
+.navbar-icon-pic{
+    height: 3rem;
+    margin: 0 1rem;
+    border-radius: 1.5rem;
+    background-color: white ;
+}
+@media (min-width: 992px) {
+    .navbar {
+        position: absolute;
+        width: 100%;
+        padding: 30px 60px;
+        background: transparent !important;
+        z-index: 9;
+    }
+    
+    .navbar.nav-sticky {
+        padding: 10px 60px;
+        background: #ffffff !important;
+    }
+    
+    .navbar .navbar-brand {
+        color: #fbaf32;
+    }
+    
+    .navbar.nav-sticky .navbar-brand {
+        color: #fbaf32;
+    }
+
+    .navbar-light .navbar-nav .nav-link,
+    .navbar-light .navbar-nav .nav-link:focus {
+        padding: 10px 10px 8px 10px;
+        font-family: 'Nunito', sans-serif;
+        color: #ffffff;
+        font-size: 18px;
+        font-weight: 600;
+    }
+    
+    .navbar-light.nav-sticky .navbar-nav .nav-link,
+    .navbar-light.nav-sticky .navbar-nav .nav-link:focus {
+        color: #666666;
+    }
+
+    .navbar-light .navbar-nav .nav-link:hover,
+    .navbar-light .navbar-nav .nav-link.active {
+        color: #fbaf32;
+    }
+    
+    .navbar-light.nav-sticky .navbar-nav .nav-link:hover,
+    .navbar-light.nav-sticky .navbar-nav .nav-link.active {
+        color: #fbaf32;
+    }
+}
+
+@media (max-width: 991.98px) {   
+    .navbar {
+        padding: 15px;
+        background: #ffffff !important;
+    }
+    
+    .navbar .navbar-brand {
+        color: #fbaf32;
+    }
+    
+    .navbar .navbar-nav {
+        margin-top: 15px;
+    }
+    
+    .navbar a.nav-link {
+        padding: 5px;
+    }
+    
+    .navbar .dropdown-menu {
+        box-shadow: none;
+    }
+}
+
+
+/*******************************/
+/********** Hero CSS ***********/
+/*******************************/
+.carousel-main {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 400px;
+    background: #ffffff;
+}
+
+.carousel .container-fluid {
+    padding: 0;
+}
+
+.carousel .carousel-item {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.carousel .carousel-img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: right;
+    overflow: hidden;
+}
+
+.carousel .carousel-img::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.carousel .carousel-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel .carousel-text {
+    position: absolute;
+    max-width: 700px;
+    height: calc(100vh - 35px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 2;
+}
+
+.carousel .carousel-text h1 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.carousel .carousel-text h1 span {
+    color: #fbaf32;
+}
+
+.carousel .carousel-text p {
+    color: #ffffff;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 35px;
+}
+
+.carousel .carousel-btn .btn:last-child {
+    margin-left: 10px;
+    background: #719a0a;
+    border-color: #719a0a;
+}
+
+.carousel .carousel-btn .btn:last-child:hover {
+    color: #719a0a;
+    background: transparent;
+}
+
+.carousel .animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+@media (max-width: 991.98px) {
+    .carousel,
+    .carousel .carousel-item,
+    .carousel .carousel-text {
+        height: calc(100vh - 105px);
+    }
+    
+    .carousel .carousel-text h1 {
+        font-size: 35px;
+    }
+    
+    .carousel .carousel-text p {
+        font-size: 16px;
+    }
+    
+    .carousel .carousel-text .btn {
+        padding: 12px 30px;
+        font-size: 15px;
+        letter-spacing: 0;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .carousel,
+    .carousel .carousel-item,
+    .carousel .carousel-text {
+        height: calc(100vh - 70px);
+    }
+    
+    .carousel .carousel-text h1 {
+        font-size: 30px;
+    }
+    
+    .carousel .carousel-text .btn {
+        padding: 10px 25px;
+        font-size: 15px;
+        letter-spacing: 0;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .carousel .carousel-text h1 {
+        font-size: 25px;
+    }
+    
+    .carousel .carousel-text .btn {
+        padding: 8px 20px;
+        font-size: 14px;
+        letter-spacing: 0;
+    }
+}
+/*******************************/
+/********* Booking CSS *********/
+/*******************************/
+.booking {
+    position: relative;
+    top: 3rem;
+    width: 100%;
+    margin-top: 45px;
+    margin-bottom: 45px;
+    background: rgba(0, 0, 0, .04);
+}
+
+.booking .booking-content {
+    padding: 45px 0 15px 0;
+}
+
+.booking .booking-content .section-header {
+    margin-bottom: 30px;
+}
+
+.booking .booking-form {
+    padding: 60px 30px;
+    background: #fbaf32;
+}
+
+.booking .booking-form .control-group {
+    margin-bottom: 15px;
+}
+
+.booking .booking-form .input-group-text {
+    position: absolute;
+    padding: 0;
+    border: none;
+    background: none;
+    top: 15px;
+    right: 15px;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.booking .booking-form .form-control {
+    height: 45px;
+    font-size: 14px;
+    color: #ffffff;
+    padding: 0 15px;
+    border-radius: 5px !important;
+    border: 1px solid #ffffff;
+    background: transparent;
+}
+
+.booking .booking-form select.form-control {
+    padding: 0 10px;
+}
+
+.booking .booking-form .form-control::placeholder {
+    color: #ffffff;
+    opacity: 1;
+}
+
+.booking .booking-form .form-control:-ms-input-placeholder,
+.booking .booking-form .form-control::-ms-input-placeholder {
+    color: #ffffff;
+}
+
+.booking .booking-form .input-group [data-toggle="datetimepicker"] {
+    cursor: default;
+}
+
+.booking .booking-form .btn.custom-btn {
+    width: 100%;
+    color: #fbaf32;
+    background: #ffffff;
+    border: 1px solid #ffffff;
+}
+
+.booking .booking-form .btn.custom-btn:hover {
+    color: #ffffff;
+    background: transparent;
+}
+
+.submit-form{
+    margin: 4rem 0;
+}
+
+/* *********************************************
+******************** Cart CSS ***************
+********************************************* */
+
+.cart{
+    position: relative;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+ 
+    background: rgba(0, 0, 0, .04);
+
+}
+.cart-container{
+margin-top: 2rem;
+}
+
+.row{
+    margin: 0;
+    justify-content: space-between;
+}
+.cart-heading{
+      
+   text-align: left;
+   float: left;
+}
+.cart-button{
+ margin-left: 80%;
+}
+
+.cart-img{
+    width: 14rem;
+    height: 20rem;
+}
+
+.card{
+    margin: 1rem;
+    border: 0px;
+    overflow-block: false;
+    padding: 0px;
+}
+
+
+
+/*******************************/
+/*********** Item-page CSS **********/
+/*******************************/
+
+.item-container{
+    text-align: left;
+    display: flex;
+
+
+}
+
+.item-container p{
+    display: block;
+}
+.item-detail{
+    margin-left: 2rem;
+    /* position: -webkit-sticky; */
+
+    position: sticky;
+    top: 1px;
+}
+.item-img{
+    display: inline-block;
+    position: relative;
+    width: 32rem;
+    height: 40rem;
+}
+.item-container h6{
+    color: #26a541;
+}
+
+.price-detail{
+    font-size: 28px;
+    display: inline-block;
+    font-weight: 500;
+    vertical-align: sub;
+    color: #212121;
+}
+.rating{
+    padding: 2px 7px;
+    border-radius: 14px;
+    font-size: 16px;
+    font-weight: bold;
+    font-weight: 500;
+    color: white;
+    background-color: #26a541;
+    vertical-align: baseline;
+    /* display: inline-block; */
+    width: 60px;
+}
+.big-button{
+    width: 15rem;
+    margin: 0.5rem;
+    
+}
+.item-buy-button{
+    background-color: #fb641b;
+    border: 0px solid #fb641b;
+}
+.item-cart-button{
+    background-color: #ff9f00;
+    
+}
+.details{
+    margin-left: 7rem;
+    font-weight: 800;
+    color: black;
+}
+
+
+
+
+/*******************************/
+/*********** Team CSS **********/
+/*******************************/
+.team {
+    position: relative;
+    width: 100%;
+    padding: 45px 0 15px 0;
+}
+
+.team .team-item {
+    position: relative;
+    margin-bottom: 30px;
+    background: #ffffff;
+}
+
+.team .team-img {
+    position: relative;
+    border-radius: 15px 15px 0 0;
+    overflow: hidden;
+}
+
+.team .team-img img {
+    position: relative;
+    width: 100%;
+    margin-top: 15px;
+    transform: scale(1.1);
+    transition: .3s;
+}
+
+.team .team-item:hover img {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.team .team-social {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .5s;
+}
+
+.team .team-social a {
+    position: relative;
+    margin: 0 3px;
+    margin-top: 100px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #ffffff;
+    background: #fbaf32;
+    opacity: 0;
+}
+
+.team .team-social a:hover {
+    color: #ffffff;
+    background: #719a0a;
+}
+
+.team .team-item:hover .team-social {
+    background: rgba(256, 256, 256, .5);
+}
+
+.team .team-item:hover .team-social a:first-child {
+    opacity: 1;
+    margin-top: 0;
+    transition: .3s 0s;
+}
+
+.team .team-item:hover .team-social a:nth-child(2) {
+    opacity: 1;
+    margin-top: 0;
+    transition: .3s .1s;
+}
+
+.team .team-item:hover .team-social a:nth-child(3) {
+    opacity: 1;
+    margin-top: 0;
+    transition: .3s .2s;
+}
+
+.team .team-item:hover .team-social a:nth-child(4) {
+    opacity: 1;
+    margin-top: 0;
+    transition: .3s .3s;
+}
+
+.team .team-text {
+    position: relative;
+    padding: 25px 15px;
+    text-align: center;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, .07);
+    border-top: none;
+    border-radius: 0 0 15px 15px;
+}
+
+.team .team-text h2 {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.team .team-text p {
+    margin: 0;
+    font-size: 16px;
+}
+/* Testimonials */
+.testimonial {
+    position: relative;
+    width: 100%;
+    padding: 90px 0;
+    margin: 45px 0;
+    background: rgba(0, 0, 0, .04);
+}
+
+.testimonial .testimonials-carousel {
+    position: relative;
+    width: calc(100% + 30px);
+    margin: 0 -15px;
+}
+
+.testimonial .testimonial-item {
+    position: relative;
+    margin: 15px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .08);
+    transition: .3s;
+    overflow: hidden;
+}
+
+.testimonial .testimonial-item:hover {
+    box-shadow: none;
+}
+
+.testimonial .testimonial-img {
+    position: relative;
+    width: 100px;
+    border-radius: 100px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.testimonial .testimonial-img img {
+    width: 100%;
+    border-radius: 100px;
+}
+
+.testimonial .testimonial-item p {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.testimonial .testimonial-item h2 {
+    position: relative;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+.testimonial .testimonial-item h3 {
+    color: #999999;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.testimonial .owl-dots {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.testimonial .owl-dot {
+    display: inline-block;
+    margin: 0 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #fbaf32;
+}
+
+.testimonial .owl-dot.active {
+    background: #719a0a;
+}
+
+
+
+
+
+/*******************************/
+/********* Footer CSS **********/
+/*******************************/
+.footer {
+    position: relative;
+    margin-top: 45px;
+    padding-top: 90px;
+    background: rgba(0, 0, 0, .04);
+}
+
+.footer .footer-contact,
+.footer .footer-link,
+.footer .footer-newsletter {
+    position: relative;
+    margin-bottom: 45px;
+    color: #454545;
+}
+
+.footer .footer-contact h2,
+.footer .footer-link h2,
+.footer .footer-newsletter h2 {
+    position: relative;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #fbaf32;
+}
+
+.footer .footer-contact h2::after,
+.footer .footer-link h2::after,
+.footer .footer-newsletter h2::after {
+    position: absolute;
+    content: "";
+    width: 45px;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: #719a0a;
+}
+
+.footer .footer-link a {
+    display: block;
+    margin-bottom: 10px;
+    color: #454545;
+    transition: .3s;
+}
+
+.footer .footer-link a::before {
+    position: relative;
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px;
+    color: #fbaf32;
+}
+
+.footer .footer-link a:hover {
+    color: #fbaf32;
+    letter-spacing: 1px;
+}
+
+.footer .footer-contact p i {
+    width: 25px;
+    color: #fbaf32;
+}
+
+.footer .footer-social {
+    position: relative;
+    margin-top: 20px;
+    display: flex;
+}
+
+.footer .footer-social a {
+    display: inline-block;
+    margin-right: 5px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fbaf32;
+    border-radius: 35px;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.footer .footer-social a:hover {
+    background: #719a0a;
+}
+
+.footer .footer-social a:last-child {
+    margin: 0;
+}
+
+.footer .footer-newsletter .form {
+    position: relative;
+    width: 100%;
+}
+
+.footer .footer-newsletter input {
+    height: 60px;
+    background: transparent;
+    border: 1px solid #fbaf32;
+    border-radius: 5px;
+}
+
+.footer .footer-newsletter .btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    height: 44px;
+    padding: 8px 20px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.footer .copyright {
+    position: relative;
+    width: 100%;
+    padding: 30px 0;
+    text-align: center;
+    background: #ffffff;
+}
+
+.footer .copyright p {
+    margin: 0;
+    display: inline-block;
+    color: #454545;
+}
+
+.footer .copyright p a {
+    color: #fbaf32;
+}
+
+.footer .copyright p a:hover {
+    color: #719a0a;
+}
+
+
+/*******************************/
+/********* Add to cart CSS **********/
+/*******************************/
+
+@media (min-width: 1025px) {
+    .h-custom {
+    height: 100vh !important;
+    }
+    }
+    
+    .card-registration .select-input.form-control[readonly]:not([disabled]) {
+    font-size: 1rem;
+    line-height: 2.15;
+    padding-left: .75em;
+    padding-right: .75em;
+    }
+    
+    .card-registration .select-arrow {
+    top: 13px;
+    }
+    
+    .bg-grey {
+    background-color: #eae8e8;
+    }
+    
+    @media (min-width: 992px) {
+    .card-registration-2 .bg-grey {
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+    }
+    }
+    
+    @media (max-width: 991px) {
+    .card-registration-2 .bg-grey {
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    }
+    }
+    .cartItemNo{
+        width: 4rem;
+    }

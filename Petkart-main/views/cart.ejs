@@ -1,0 +1,94 @@
+<div class="cart" id="product">
+  
+  <% for(var i=0; i<4 ; i++) { %>
+  <h3 class="cart-heading"><%= productTitle[i] %></h3>
+
+  <a href="/<%= productTitle[i]%>" class="btn btn-md btn-primary cart-button">
+    View More
+  </a>
+
+  <hr />
+  <div class="container">
+    <div class="row d-flex">
+      <% for(var j=0; j<5; j++){ %>
+      <div class="card col-lg-2 col-md-4 col-sm-6" style="width: 14rem">
+        <div
+          id="carouselExampleFade"
+          class="carousel-cart slide carousel-fade"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <a href="/item">
+                <img
+                  src="img/<%= productImage[i][j][0]%>"
+                  class="d-block w-30 h-30 card-img-top cart-img"
+                  alt="..."
+                />
+              </a>
+            </div>
+            <div class="carousel-item">
+              <a href="/item">
+                <img
+                  src="img/<%= productImage[i][j][1]%>"
+                  class="d-block w-30 h-30 card-img-top cart-img"
+                  alt="..."
+              /></a>
+            </div>
+            <div class="carousel-item">
+              <a href="/item">
+                <img
+                  src=" img/<%= productImage[i][j][2]  %>"
+                  class="d-block w-30 h-30 card-img-top cart-img"
+                  alt="..."
+                />
+              </a>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleFade"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleFade"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+
+        <div class="card-body">
+          <h5 class="card-title"><%= productName[i][j]%></h5>
+
+          <p class="card-text">Deal of the day</p>
+          <h5 class="card-title" style="display: inline">
+            ₹<%= productPrice[i][j]%>
+          </h5>
+          <!-- <a href="/buyNow" class="btn btn-sm btn-primary">Buy Now</a> -->
+          <form action="/addToCart" method="post">
+            <input type="hidden" name="userId" value="<%= userDetail %> " />
+            <button
+              type="submit"
+              class="btn btn-sm btn-danger"
+              name="product_id"
+              value="<%= productId[i][j] %>"
+            >
+              Add to cart
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <% } %>
+    </div>
+  </div>
+  <% } %>
+</div>

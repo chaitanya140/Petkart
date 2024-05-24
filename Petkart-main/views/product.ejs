@@ -1,0 +1,56 @@
+<%- include("header")  -%>
+
+<div class="cart cart-container" id="product">
+   
+    <h3 class="cart-heading"> <%= productTitle %> </h3>
+  
+    <hr>
+
+      <div class="container">
+
+        <div class="row d-flex">
+             
+         <%   for(var j=0; j<productName.length; j++){ %> 
+            <div class="card col-lg-2" style="width: 14rem">
+
+              <div id="carouselExampleFade" class="carousel-cart slide carousel-fade" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="img/<%= productImage[j][0]%> " class="d-block w-30 h-30 card-img-top cart-img" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img/<%= productImage[j][1]%> "  class="d-block w-30 h-30 card-img-top cart-img" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src=" img/<%= productImage[j][2]  %> "  class="d-block w-30 h-30 card-img-top cart-img" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            
+                <div class="card-body">
+                  <h5 class="card-title"> <%= productName[j]%> </h5>
+                   
+                  <p class="card-text">Deal of the day</p>
+                  <h5 class="card-title" style="display: inline;"> ₹<%= productPrice[j]%> </h5>
+
+                   <a href="#" class="btn btn-sm btn-danger">Add to cart</a>
+                   </div>
+                 </div>
+           
+         <%  }%>  
+       
+          
+        </div>
+      </div> 
+  
+</div>
+
+  <%- include("footer") -%> 
